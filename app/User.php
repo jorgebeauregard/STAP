@@ -4,9 +4,19 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Category;
+use App\Ad;
 
 class User extends Authenticatable
 {
+    public function category(){
+        return $this->belongsTo('App\Category');
+    }
+
+    public function ads(){
+        return $this->hasMany('App\Ad');
+    }
+
     use Notifiable;
 
     /**
