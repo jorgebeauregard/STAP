@@ -15,7 +15,14 @@ class CreateAdsTable extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('client_id')->unsigned();
+            $table->string('path');
+            $table->integer('quantity');
+            $table->datetime('limit');
+            $table->boolean('active');
             $table->timestamps();
+
+            $table->foreign('client_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

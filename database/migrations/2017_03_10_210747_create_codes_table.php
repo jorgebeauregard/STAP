@@ -15,7 +15,11 @@ class CreateCodesTable extends Migration
     {
         Schema::create('codes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->integer('ad_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('ad_id')->references('id')->on('ads')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

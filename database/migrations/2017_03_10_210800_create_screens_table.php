@@ -15,6 +15,21 @@ class CreateScreensTable extends Migration
     {
         Schema::create('screens', function (Blueprint $table) {
             $table->increments('id');
+            $table->decimal('latitude', 10, 7);
+            $table->decimal('longitude',10, 7);
+            $table->string('name');
+            $table->string('city');
+            $table->string('province');
+            $table->timestamps();
+
+
+        });
+
+
+        Schema::create('ad_screen', function (BluePrint $table) {
+            $table->increments('id');
+            $table->integer('ad_id');
+            $table->integer('screen_id');
             $table->timestamps();
         });
     }
@@ -26,6 +41,8 @@ class CreateScreensTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('ad_screen');
         Schema::dropIfExists('screens');
+
     }
 }
