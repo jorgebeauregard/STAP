@@ -70,6 +70,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('codes.index') }}">
+                    <i class="pe-7s-ticket"></i>
+                    <p>Codigos</p>
+                </a>
+            </li>
+            <li>
                 <a href="{{url('/logout')}}">
                     <i class="pe-7s-power"></i>
                     <p>Cerrar sesión</p>

@@ -17,13 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
 Route::resource('screens', 'ScreenController');
 
 Route::resource('ads', 'AdController');
 
+Route::resource('codes', 'CodeController');
+
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/myads', 'AdController@index')->name('myads');
 
 Route::get('logout', function () {
   Auth::logout();

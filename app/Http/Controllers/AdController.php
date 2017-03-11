@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Ad;
 use App\User;
+use App\Category;
+use Carbon\Carbon;
 use Auth;
 
 
@@ -15,7 +17,7 @@ class AdController extends Controller
     }
 
     public function create(){
-    	$client_names = User::select('name')->get();
+    	$client_names = Category::select('name')->get();
     	foreach($client_names as $client_name){
     		$names[] = $client_name->name;
     	}
@@ -26,44 +28,45 @@ class AdController extends Controller
 
 	public function store(Request $request){
 		$this->validate($request, [
-			"client_id" => "required|string",
-			"path" => "image",
+			"category_id" => "required|string",
+			"path" => "required|image",
 			"quantity" => "required|string",
 			"limit" => "required|string",
-			"active" => "required|string",
 			]);
 
-		if($request->hasFile("image")){
-            $path = $request->image->store('public');
+		if($request->hasFile("path")){
+            $path = $request->path->store('public');
         }
         else{
-            $request->session()->flash('error', "No has subido la imagen del anuncio");
+            $request->session()->flash('error', "No ha subido la imagen del anuncio");
             return back()->withInput();
         }
 
         //Get client_id
+        $user_id = Auth::user()->getId();
         //The controller will receive a string of the client, we have to get the id of it.
 
         //Name gets the name from request. client_id should be client_name but meh
-        $clientIndex = $request->client_id;
+        $category_index = $request->category_id;
 
-        $clients = User::select('name')->get();
-        foreach($clients as $client){
-            $clients_names[] = $client->name;
+        $category_names = Category::select('name')->get();
+        foreach($category_names as $category_name){
+            $names[] = $category_name->name;
         }
 
-        $client_id = User::where('name', $clients_names[$clientIndex])->first()->id;
+        $category_id = Category::where('name', $names[$category_index])->first()->id;
 
         //Check for duplicated images
-        $duplicatedImage = Ad::where('image',$request->image)->count();
+        $duplicatedImage = Ad::where('path',$request->path)->count();
 
         if($duplicatedImage == 0){
             Ad::create([
-                "client_id" => $client_id,
-                "path" => $request->path,
+                "user_id" => $user_id,
+                "category_id" => $category_id,
+                "path" => $path,
                 "quantity" => $request->quantity,
                 "limit" => $request->limit,
-                "active" => $request->active,
+                "active" => true,
             ]);
         }
         else{
@@ -75,7 +78,7 @@ class AdController extends Controller
 	}
 
     public function show($id){
-        $ad  = Ad::where('id',$id)->firstOrFail();
+        $ad  = Ad::find($id);
         return view('ads.show', ['ad' => $ad]);
     }
 
