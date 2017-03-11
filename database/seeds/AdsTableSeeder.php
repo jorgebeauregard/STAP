@@ -14,7 +14,7 @@ class AdsTableSeeder extends Seeder
         DB::table('ads')->insert([
           'client_id' => 1,
           'category_id' => 3,
-          'path' => '/public/img/mts.png',
+          'path' => 'public/mts.png',
           'quantity' => 100,
           'limit' => '2017-03-12',
           'active' => true,
@@ -23,7 +23,7 @@ class AdsTableSeeder extends Seeder
         DB::table('ads')->insert([
           'client_id' => 2,
           'category_id' => 3,
-          'path' => '/public/img/paint.jpg',
+          'path' => 'public/paint.jpg',
           'quantity' => 100,
           'limit' => '2017-03-12',
           'active' => true,

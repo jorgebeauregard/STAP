@@ -18,7 +18,7 @@ class AdsScreensTableSeeder extends Seeder
 
         DB::table('ad_screen')->insert([
           'ad_id' => 2,
-          'screen_id' => 3,
+          'screen_id' => 1,
         ]);
 
         DB::table('ad_screen')->insert([

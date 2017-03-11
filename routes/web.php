@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('screens', 'ScreenController');
+
 Route::get('/home', 'HomeController@index');

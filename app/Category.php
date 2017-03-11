@@ -3,11 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
+use App\Ad;
 
 class Category extends Model
 {
-    public function users(){
-    	return $this->hasMany('App\User');
+    public function ads(){
+    	return $this->hasMany('App\Ad');
     }
 }

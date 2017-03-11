@@ -4,6 +4,7 @@ namespace App;
 use App\Screen;
 use App\Code;
 use App\User;
+use App\Category;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,5 +20,9 @@ class Ad extends Model
 
     public function user(){
     	return $this->belongsTo('App\User');
+    }
+
+    public function category(){
+    	return $this->belongsTO('App\Category');
     }
 }
