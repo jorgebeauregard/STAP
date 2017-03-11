@@ -22,3 +22,8 @@ Route::resource('screens', 'ScreenController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/myads', 'AdController@index')->name('myads');
+
+Route::get('logout', function () {
+  Auth::logout();
+  return view('welcome');
+});

@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="{{url('/logout')}}">
                         <i class="pe-7s-note2"></i>
                         <p>Cerrar sesión</p>
                     </a>
