@@ -20,6 +20,8 @@ Auth::routes();
 
 Route::resource('screens', 'ScreenController');
 
+Route::resource('ads', 'AdController');
+
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/myads', 'AdController@index')->name('myads');
 

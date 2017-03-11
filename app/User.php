@@ -9,14 +9,6 @@ use App\Ad;
 
 class User extends Authenticatable
 {
-    public function category(){
-        return $this->belongsTo('App\Category');
-    }
-
-    public function ads(){
-        return $this->hasMany('App\Ad');
-    }
-
     use Notifiable;
 
     /**
@@ -36,4 +28,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function category(){
+        return $this->belongsTo('App\Category');
+    }
+
+    public function ads(){
+        return $this->hasMany('App\Ad');
+    }
+
+    public function getId(){
+        return $this->id;
+    }
 }
