@@ -43,8 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {{ asset('landing/js/main.js')}}
-          <a class="logo" href="index.html"><img src="img/logo.png" height="32px" alt="Logo"></a>
+          <a class="logo" href="index.html"><img src="          {{ asset('landing/img/logo.png')}}" height="32px" alt="Logo"></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -59,7 +58,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="index.html"><img src="img/logo.png" height="32px" alt="Logo"></a>
+
+            <a href="index.html"><img src="{{ asset('landing/img/logo.png')}}" height="32px" alt="Logo"></a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
             <a href="#pricing" class="scroll">Precios</a>&nbsp; &nbsp; &nbsp;<a href="#">Iniciar Sesi&oacuten</a>
@@ -97,7 +97,9 @@
           <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
             <h2>STAP! Take a look</h2>
             <p class="lead">Experimenta el marketing de la nueva era. <br> Env&iacuteanos tus carteles y promociones, nosotros nos encargamos del resto.</p>
-            <img src="img/cel_hack.png" height="700px">
+                      
+
+            <img src="{{ asset('landing/img/cel_hack.png')}}" height="700px">
           </div>
         </div>
         
