@@ -18,14 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('category_id')->unsigned();
             $table->boolean('type');
             $table->datetime('limit');
             $table->boolean('active');
             $table->rememberToken();
             $table->timestamps();
-
-            $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');
         });
 
     }

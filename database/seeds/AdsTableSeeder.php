@@ -13,6 +13,7 @@ class AdsTableSeeder extends Seeder
     {
         DB::table('ads')->insert([
           'client_id' => 1,
+          'category_id' => 3,
           'path' => '/public/img/mts.png',
           'quantity' => 100,
           'limit' => '2017-03-12',
@@ -21,6 +22,7 @@ class AdsTableSeeder extends Seeder
 
         DB::table('ads')->insert([
           'client_id' => 2,
+          'category_id' => 3,
           'path' => '/public/img/paint.jpg',
           'quantity' => 100,
           'limit' => '2017-03-12',
