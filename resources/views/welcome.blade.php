@@ -148,11 +148,10 @@
             <br />
             <ul class="list-unstyled pricing-table text-center">
                         <li class="headline"><h5 class="white">Personal</h5></li>
-                        <li class="price"><div class="amount">$5<small>/m</small></div></li>
-                        <li class="info">2 row section for you package information. You can include all details or icons</li>
-                        <li class="features first">Up To 25 Projects</li>
-                        <li class="features">10GB Storage</li>
-                        <li class="features">Other info</li>
+                        <li class="price"><div class="amount">$5k<small>/m</small></div></li>
+                      
+                        <li class="features first">Publica hasta 5 anuncios</li>
+                        <li class="features">Tus anuncios seran publicados en secciones de tiempo disponibles</li>
                         <li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
                     </ul>
           </div>
@@ -160,12 +159,10 @@
           <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="0.4s">
             <ul class="list-unstyled pricing-table active text-center">
                         <li class="headline"><h5 class="white">Professional</h5></li>
-                        <li class="price"><div class="amount">$12<small>/m</small></div></li>
-                        <li class="info">2 row section for you package information. You can include all details or icons</li>
-                        <li class="features first">Up To 25 Projects</li>
-                        <li class="features">10GB Storage</li>
-                        <li class="features">Other info</li>
-                        <li class="features">Other info</li>
+                        <li class="price"><div class="amount">$12k<small>/m</small></div></li>
+                     
+                        <li class="features first">Publica hasta 50 anuncios</li>
+                        <li class="features">Disfruta de la oportunidad de publicar tus anuncios en cualquier parte de la ciudad</li>
                         <li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
                     </ul>
           </div>
@@ -173,12 +170,11 @@
           <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1.3s">
             <br />
             <ul class="list-unstyled pricing-table text-center">
-                        <li class="headline"><h5 class="white">Business</h5></li>
-                        <li class="price"><div class="amount">$24<small>/m</small></div></li>
-                        <li class="info">2 row section for you package information. You can include all details or icons</li>
-                        <li class="features first">Up To 25 Projects</li>
-                        <li class="features">10GB Storage</li>
-                        <li class="features">Other info</li>
+                        <li class="headline"><h5 class="white">Empresarial</h5></li>
+                        <li class="price"><div class="amount">$24k<small>/m</small></div></li>
+                   
+                        <li class="features first">Cantidad de anuncios ilimitados</li>
+                        <li class="features">Tu publicidad tendrá prioridad en temporadas festivas</li>
                         <li class="features last btn btn-secondary btn-wide"><a href="#">Get Started</a></li>
                     </ul>
           </div>
