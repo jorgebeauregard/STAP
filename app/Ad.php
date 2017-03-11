@@ -10,6 +10,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ad extends Model
 {
+
+    protected $table = "ads";
+    protected $fillable = ['user_id','category_id','path','quantity','limit','active'];
+
 	public function screen(){
     	return $this->belongsToMany('App\Screen');
     }
