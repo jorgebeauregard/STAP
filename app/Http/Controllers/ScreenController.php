@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Screen;
+use Auth;
 
 class ScreenController extends Controller
 {
@@ -12,9 +13,8 @@ class ScreenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('screens.index', ['screens' => Screen::all()]);
+    public function index(){
+        return view('screens.index',['screens'=> Screen::all(),'id'=> Auth::user()->getId()]);
     }
 
     /**

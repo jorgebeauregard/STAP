@@ -1,5 +1,6 @@
 @extends('layouts.sidebar')
 
+@section('description','Mis pantallas')
 @section('content')
 <div>
     <section>
@@ -16,11 +17,16 @@
             <tbody>
                 @foreach ($screens as $screen)
                 <tr>
-                    <td class="center"><a href="{{ route('screens.show', [ $screen->id]) }}">{{ $screen->name }} </td>
-                    <td class="center">{{ $screen->latitude }} </td>
-                    <td class="center">{{ $screen->longitude }} </td>
-                    <td class="center">{{ $screen->city }} </td>
-                    <td class="center">{{ $screen->province }} </td>
+                   <?php $array = $screen->ads ?>
+                    @foreach($array as $element)
+                        @if($element->user_id == $id)
+                            <td class="center"><a href="{{ route('screens.show', [ $screen->id]) }}">{{ $screen->name }} </td>
+                            <td class="center">{{ $screen->latitude }} </td>
+                            <td class="center">{{ $screen->longitude }} </td>
+                            <td class="center">{{ $screen->city }} </td>
+                            <td class="center">{{ $screen->province }} </td>
+                        @endif
+                    @endforeach
                 </tr>
                 @endforeach
             </tbody>
