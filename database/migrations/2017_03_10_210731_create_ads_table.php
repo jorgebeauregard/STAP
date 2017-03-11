@@ -15,7 +15,7 @@ class CreateAdsTable extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('client_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->string('path');
             $table->integer('quantity');
@@ -23,7 +23,7 @@ class CreateAdsTable extends Migration
             $table->boolean('active');
             $table->timestamps();
 
-            $table->foreign('client_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');
         });
     }

@@ -48,7 +48,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#pricing" class="scroll">Precios</a></li>
-            <li><a href="#">Iniciar Sesi&oacuten</a></li>
+            <li><a href="{{route('home')}}">Iniciar Sesi&oacuten</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -62,7 +62,7 @@
             <a href="index.html"><img src="{{ asset('landing/img/logo.png')}}" height="32px" alt="Logo"></a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
-            <a href="#pricing" class="scroll">Precios</a>&nbsp; &nbsp; &nbsp;<a href="#">Iniciar Sesi&oacuten</a>
+            <a href="#pricing" class="scroll">Precios</a>&nbsp; &nbsp; &nbsp;<a href="{{route('home')}}">Iniciar Sesi&oacuten</a>
           </div>
         </div>
         
