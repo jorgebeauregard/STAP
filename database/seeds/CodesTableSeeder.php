@@ -23,22 +23,22 @@ class CodesTableSeeder extends Seeder
 
         DB::table('codes')->insert([
         	'name'=>'GYGREQYY',
-        	'ad_id'=>3,
-        ]);
-
-        DB::table('codes')->insert([
-        	'name'=>'N5NMWVTL',
         	'ad_id'=>1,
         ]);
 
         DB::table('codes')->insert([
-        	'name'=>'EWY3UYW8',
+        	'name'=>'N5NMWVTL',
         	'ad_id'=>2,
         ]);
 
         DB::table('codes')->insert([
+        	'name'=>'EWY3UYW8',
+        	'ad_id'=>1,
+        ]);
+
+        DB::table('codes')->insert([
         	'name'=>'VVZ2UA8T',
-        	'ad_id'=>3,
+        	'ad_id'=>2,
         ]);
 
         DB::table('codes')->insert([
@@ -53,7 +53,7 @@ class CodesTableSeeder extends Seeder
 
         DB::table('codes')->insert([
         	'name'=>'JB3KM2M2',
-        	'ad_id'=>3,
+        	'ad_id'=>1,
         ]);
 
     }
