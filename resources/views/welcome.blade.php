@@ -71,13 +71,13 @@
             <h1 class="wow fadeIn">Conocer&aacuten tu nombre</h1>
             <br />
             <p class="lead wow fadeIn" data-wow-delay="0.5s">Tu nombre en los mejores eventos y en los lugares donde realmente se necesite. </p>
-            <br />
+            <br/>
               
             <div class="row">
               <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                 <div class="row">
                   <center>
-                    <a href="#be-the-first" class="btn btn-secondary btn-lg scroll">Ver detalles</a>
+                    <a href="#pricing" class="btn btn-secondary btn-lg scroll">Ver detalles</a>
                   </center>
                 </div><!--End Button Row-->  
               </div>
@@ -90,6 +90,20 @@
     <div class="mouse-icon hidden-xs">
                 <div class="scroll"></div>
             </div>
+
+      <section id="pricing" class="pad-xl">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
+            <h2>¿De qué estamos hablando?</h2>
+            <br>
+            <p class="lead">STAP parte de la premisa de la conectividad de una smart city. Al todos los ciudadanos estar conectados a la misma red, podemos analizar tendencias en los intereses de los mismos y desplegar <b>publicidad dirigida</b> con respecto a la mayoría mediante pantallas repartidas en puntos estratégicos de la ciudad. </p>
+            <p class="lead">Esto promueve una estrategia de mercado más ajustada a las preferencias de la gente en sectores específicos, activando así la economía local y extranjera.</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>        
     
     <section id="be-the-first" class="pad-xl">
       <div class="container">
@@ -97,9 +111,6 @@
           <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
             <h2>STAP! Take a look</h2>
             <p class="lead">Experimenta el marketing de la nueva era. <br> Env&iacuteanos tus carteles y promociones, nosotros nos encargamos del resto.</p>
-                      
-
-            <img src="{{ asset('landing/img/cel_hack.png')}}" height="700px">
           </div>
         </div>
         
@@ -189,17 +200,12 @@
         
         <div class="row">
           <div class="col-sm-8 margin-20">
-            <ul class="list-inline social">
-              <li>Connect with us on</li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
+
           </div>
           
           <div class="col-sm-4 text-right">
-            <p><small>Copyright &copy; 2014. All rights reserved. <br>
-                Created by <a href="http://visualsoldiers.com">Visual Soldiers</a></small></p>
+            <p><small>Copyright &copy; 2017. All rights reserved. <br>
+                Created by <a>LCL</a></small></p>
           </div>
         </div>
         
